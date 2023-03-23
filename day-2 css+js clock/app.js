@@ -1,6 +1,7 @@
 
 setInterval(setDate, 1000);
 setInterval(digitalClock, 1000);
+setInterval(date, 1000);
 const secondHand = document.querySelector('[data-second-hand]');
 const hourHand = document.querySelector('[data-hour-hand]');
 const minHand = document.querySelector('[data-min-hand]');
@@ -27,10 +28,20 @@ function digitalClock() {
     minute = (minute < 10) ? "0" + minute : minute;
     second = (second < 10) ? "0" + second : second;
 
+    document.getElementById("digital").innerHTML = hour + "." + minute + "." + second + " ";
 
-    document.getElementById("digital").innerHTML = hour + "." + minute + "." + second;
+}
+
+function date() {
+    let now = new Date();
+    let day = now.getDay();
+    let month = now.getMonth();
+    let year = now.getFullYear();
+    day = (day < 10) ? "0" + day : day;
+    month = (month < 10) ? "0" + month : month;
+    document.getElementById("date").innerHTML = day + "." + month + "." + year;
 }
 
 setDate();
 digitalClock();
-
+date();

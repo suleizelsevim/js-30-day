@@ -119,3 +119,22 @@ body {
     display: flex;
     filter: grayscale(8px);
 }
+
+#date-div {
+    height: 20%;
+    width: 80%;
+    top: -30%;
+    left: 8%;
+    position: absolute;
+    margin: auto;
+    display: flex;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+#date {
+    margin: auto;
+    font-size: 30px;
+    filter: drop-shadow(2px 0px 2px rgb(255, 255, 255));
+    color: rgb(0, 0, 0);
+}
