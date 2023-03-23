@@ -1,0 +1,121 @@
+html {
+    background-image: url("wall.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 10px;
+}
+
+body {
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+    overflow: hidden;
+}
+
+.clock {
+    width: 30rem;
+    height: 30rem;
+    border: 20 px solid white;
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 2rem;
+    box-shadow:
+        0 0 0px 4px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0, 0, 0.2);
+}
+
+.clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px);
+}
+
+
+.second-hand {
+    width: 6px;
+    height: 40%;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 11%;
+    left: 49%;
+    transform-origin: bottom;
+    /* çubuğun merkezini değiştirdik*/
+    border-top-right-radius: 50%;
+    border-start-start-radius: 50%;
+    transition: all 1s;
+    transition-timing-function: step-start;
+
+}
+
+.hour-hand {
+    width: 6px;
+    height: 30%;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 21%;
+    left: 49%;
+    transform-origin: bottom;
+    /* çubuğun merkezini değiştirdik*/
+    border-top-right-radius: 50%;
+    border-start-start-radius: 50%;
+    transition: all 1s;
+    transition-timing-function: step-start;
+
+}
+
+.min-hand {
+    width: 6px;
+    height: 40%;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 11%;
+    left: 49%;
+    transform-origin: bottom;
+    /* çubuğun merkezini değiştirdik*/
+    border-top-right-radius: 50%;
+    border-start-start-radius: 50%;
+    transition: all 1s;
+    transition-timing-function: step-start;
+}
+
+.clock::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+    width: 9px;
+    height: 9px;
+    top: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+}
+
+#digital {
+    font-size: 50px;
+    margin: auto;
+    text-align: center;
+    filter: drop-shadow(3px 0px 3px white);
+}
+
+.digital {
+    height: 30%;
+    width: 100%;
+    left: 0%;
+    top: 110%;
+    position: absolute;
+    z-index: 11;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    filter: grayscale(8px);
+}
